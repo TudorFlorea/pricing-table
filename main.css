@@ -1,0 +1,118 @@
+body {
+    background: #777;
+}
+
+#pricing {
+    width: 1000px;
+    margin: 80px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead tr th {
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+thead tr th p {
+    color: #eee;
+}
+
+thead tr th:nth-child(2) {
+    background: #fd746e;
+    border: 3px solid #fd746e;
+}
+
+thead tr th:nth-child(3) {
+    background: #b7e334;
+}
+
+thead tr th:nth-child(4) {
+    background: #76b1c3;
+}
+
+tbody tr {
+    border: 1px solid rgb(105, 102, 102);
+    height: 40px;
+    background: white;
+    font-family: sans-serif;
+}
+
+tbody tr td {
+    padding: 10px;
+}
+
+tbody tr td {
+    border: 1px solid rgb(105, 102, 102);
+}
+
+tbody tr td:first-of-type {
+    border-left: 3px solid #fd746e;
+    border-right: 3px solid #fd746e;
+}
+
+tbody tr:last-of-type td:first-of-type {
+    border-bottom: 3px solid #fd746e;
+}
+
+tbody tr:last-of-type td p:first-of-type{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+tbody tr:last-of-type td p:last-of-type {
+    font-size: 16px;
+    color: #aaa;
+}
+
+tbody tr:nth-child(2n) {
+    background: #eee;
+}
+
+tbody tr th {
+    width: 200px;
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+tbody tr:last-of-type th:last-of-type {
+    font-weight: bold;
+}
+
+.circle {
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.red {
+    background: #fd746e;
+}
+
+.green {
+    background: #b7e334;
+}
+
+.blue {
+    background: #76b1c3;
+}
+
+tr td a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    display: block;
+    width: 80%;
+    height: 30px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin: 30px auto;
+    padding: 10px;
+}
