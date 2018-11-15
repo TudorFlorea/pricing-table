@@ -1,5 +1,6 @@
 body {
     background: #777;
+    background-image: linear-gradient(135deg,#CCCCCC, #636363);
 }
 
 #pricing {
@@ -7,6 +8,7 @@ body {
     margin: 80px auto;
     border-collapse: collapse;
     text-align: center;
+    color: #717171;
 }
 
 thead tr th {
@@ -19,21 +21,59 @@ thead tr th p {
     color: #eee;
 }
 
+thead tr th:nth-child(2),
+thead tr th:nth-child(3),
+thead tr th:nth-child(4) {
+    position: relative;
+}
+
 thead tr th:nth-child(2) {
     background: #fd746e;
     border: 3px solid #fd746e;
+    border-bottom: 5px solid #C9423C;
+
 }
 
 thead tr th:nth-child(3) {
     background: #b7e334;
+    border-bottom: 5px solid #7AA307;
 }
 
 thead tr th:nth-child(4) {
     background: #76b1c3;
+    border-bottom: 5px solid #558F9B;
+}
+
+thead tr th:nth-child(2):before,
+thead tr th:nth-child(3):before,
+thead tr th:nth-child(4):before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 18% 16%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 18% 16%, 0 100%);
+    background: #636363;
+}
+
+thead tr th:nth-child(2):before {
+    background: #FF8985;
+}
+
+thead tr th:nth-child(3):before {
+    background: #DAF66D;
+}
+
+thead tr th:nth-child(4):before {
+    background: #82C0D5;
 }
 
 tbody tr {
-    border: 1px solid rgb(105, 102, 102);
+    border: 1px solid #CDCDCD;
     height: 40px;
     background: white;
     font-family: sans-serif;
@@ -44,7 +84,7 @@ tbody tr td {
 }
 
 tbody tr td {
-    border: 1px solid rgb(105, 102, 102);
+    border: 1px solid#CDCDCD;
 }
 
 tbody tr td:first-of-type {
@@ -67,7 +107,7 @@ tbody tr:last-of-type td p:last-of-type {
 }
 
 tbody tr:nth-child(2n) {
-    background: #eee;
+    background: #EBEBEB;
 }
 
 tbody tr th {
@@ -105,6 +145,7 @@ tbody tr:last-of-type th:last-of-type {
 }
 
 tr td a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-family: sans-serif;
@@ -115,4 +156,48 @@ tr td a {
     border-radius: 5px;
     margin: 30px auto;
     padding: 10px;
+    transition: all 0.4s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+tr td a:before {
+    border-radius: 5px;
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-clip-path: polygon(0 0, 100% 0, 26% 28%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 26% 28%, 0 100%);
+}
+
+a.red {
+    border-bottom: 5px solid #C9423C;
+}
+
+a.green {
+    border-bottom: 5px solid #7AA307;
+}
+
+a.blue {
+    border-bottom: 5px solid #558F9B;
+}
+
+.red:before {
+    background-color:#FF8986;
+}
+
+.green:before {
+    background-color: #C6ED56;
+}
+
+.blue:before {
+    background-color: #82BFD4;
+}
+
+tr td a:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
